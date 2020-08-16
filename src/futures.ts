@@ -73,6 +73,7 @@ const main = async () => {
     const positions = positionsRisk.filter((item: any) => parseFloat(item.positionAmt) > 0)
     // console.log(positions)
     const positionsRiskSummary = positions.map((item: any) => {
+      // console.log(item)
       return {
         symbol: item.symbol,
         entryTotal: new Decimal(item.positionAmt).mul(item.entryPrice),
